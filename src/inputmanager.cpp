@@ -20,7 +20,7 @@
 #endif
 
 using namespace std;
-#include <stdio.h>
+
 #include <unistd.h>
 #include <sys/time.h>
 #include <string>
@@ -138,10 +138,8 @@ void InputManager::Process(InputEvt &evt) {
             if (mOutputRead > 1 && UseEncodingFilter) {
                 mOutputRead = DoEncodingFilter(CONVERT_TO_UTF8_FILTER, mOutputBuf, mOutputRead);
                 if (EncodingFilterLen > 0) {
-                    for (size_t i = 0; i < EncodingFilterLen; i++){
-                        printf("|--(%#X)--|\n", EncodingFilterBuff[i]);
+                    for (size_t i = 0; i < EncodingFilterLen; i++)
                         ProcessKey(EncodingFilterBuff[i], evt);
-                }
                 }
             }
             else
