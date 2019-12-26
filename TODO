@@ -1,0 +1,21 @@
+Here is a list of so-called todo list for zhcon.
+When will these nice features be ready?
+This is always a difficult question to answer.
+Things get done when I have the time.
+Due to the limitation of my free time (that is, time for hacking
+freeware). If someone wants to do such a hack, please contact me.
+
+Known bugs:
+Current release is stable for everyday work. However
+zhcon is not bug free. Here's some minor bug found so far:
+* screen get locked when switching VT very fast
+* screen may get blank when quiting from VGA16 mode 
+
+Todo (sorted by priority):
+* input interface clean up
+* port to X-Window (yet another CJK term), using SDL
+* complete bsd port
+* rewrite zhcon using ucs2 as internal encoding (pending)
+* use FreeType to render TTF font, so we can display fonts in different points
+* restore previous video mode when quit
+* speed optimize
